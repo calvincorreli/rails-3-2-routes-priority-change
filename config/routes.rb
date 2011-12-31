@@ -1,6 +1,7 @@
 RoutesTest::Application.routes.draw do
-  resources :models
-  match 'special' => 'model#new', :as => :new_model
+  resources :purchases
+  match 'purchase/:product_id' => 'purchases#new', :as => :new_purchase
+  match 'purchase/:product_id' => 'purchases#new', :as => :correct_new_purchase
   
   
   # The priority is based upon order of creation:
